@@ -25,6 +25,9 @@ var transporter = nm.createTransport({
   },
 });
 
+app.use("/",(req,res) =>{
+  res.json({message : 'Starting Server'});
+});
 
 app.post("/sendContactDetail",(req,res) =>{
   let name = req.body.name;
