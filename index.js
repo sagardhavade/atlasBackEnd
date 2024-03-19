@@ -31,6 +31,7 @@ var transporter = nm.createTransport({
 //   res.json({message : 'Starting Server'});
 // });
 
+
 app.post("/sendContactDetail",(req,res) =>{
   let name = req.body.name;
   let email = req.body.email;
