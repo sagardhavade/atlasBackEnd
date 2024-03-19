@@ -20,14 +20,16 @@ var transporter = nm.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: "tcpltechsp@gmail.com",
-    pass: "qkuldlknsemrtksg",
+    // user: "tcpltechsp@gmail.com",
+    // pass: "qkuldlknsemrtksg",
+    user: "info@atlasindia.co",
+    pass: "uztckilgvoobwjna",
   },
 });
 
-app.use("/",(req,res) =>{
-  res.json({message : 'Starting Server'});
-});
+// app.use("/",(req,res) =>{
+//   res.json({message : 'Starting Server'});
+// });
 
 app.post("/sendContactDetail",(req,res) =>{
   let name = req.body.name;
@@ -36,8 +38,10 @@ app.post("/sendContactDetail",(req,res) =>{
   let subject = req.body.subject;
   let message = req.body.message;
   var options ={
-    from : "tcpltechsp@gmail.com",
-    to : "tcpltechsp@gmail.com",
+    // from : "tcpltechsp@gmail.com",
+    // to : "tcpltechsp@gmail.com",
+    from : "info@atlasindia.co",
+    to : "info@atlasindia.co",
     subject : subject || "Enquiry",
     html: `
     <!DOCTYPE html>
@@ -165,8 +169,8 @@ app.post("/sendmail", upload.single('cv'), (req, res) => {
   let cv = req.file;
   console.log(email, name, message, phone, subject, cv);
   var options = {
-    from: "tcpltechsp@gmail.com",
-    to: "tcpltechsp@gmail.com",
+    from: "info@atlasindia.co",
+    to: "info@atlasindia.co",
     subject: subject || "Enquiry", // Subject is optional, set a default if not provided
     html: 
         `<!DOCTYPE html>
@@ -301,8 +305,8 @@ app.post("/SubscriptionMail", (req, res) => {
   
 console.log(email);
   let options = {
-    from: "tcpltechsp@gmail.com",
-    to: "tcpltechsp@gmail.com",
+    from: "info@atlasindia.co",
+    to: "info@atlasindia.co",
     subject: "Subscription  Mail",
     html: `
     <h3>
